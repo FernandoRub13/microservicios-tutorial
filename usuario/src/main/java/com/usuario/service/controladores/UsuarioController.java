@@ -98,8 +98,6 @@ public class UsuarioController {
         if (usuario == null) {
             return ResponseEntity.notFound().build();
         }
-        // Log in console
-        System.out.println("Usuario: " + usuario.getNombre());
         return ResponseEntity.ok(usuarioServicio.getCarrosMotos(id));
     }
 
