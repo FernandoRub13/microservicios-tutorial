@@ -2,6 +2,13 @@
     "configurations": [
         {
             "type": "java",
+            "name": "Launch with Arguments Prompt",
+            "request": "launch",
+            "mainClass": "",
+            "args": "${command:SpecifyProgramArgs}"
+        },
+        {
+            "type": "java",
             "name": "ConfigApplication",
             "request": "launch",
             "mainClass": "com.config.service.config.ConfigApplication",
@@ -28,7 +35,16 @@
             "projectName": "carro",
             "args": "",
             "envFile": "${workspaceFolder}/.env",
-            "vmArgs": " -Dcom.sun.management.jmxremote -Dcom.sun.management.jmxremote.port=53960 -Dcom.sun.management.jmxremote.authenticate=false -Dcom.sun.management.jmxremote.ssl=false -Dspring.jmx.enabled=true -Djava.rmi.server.hostname=localhost -Dspring.application.admin.enabled=true -Dspring.boot.project.name=carro"
+        },
+        {
+            "type": "java",
+            "name": "Spring Boot-CarroApplication<carro> Instance 2",
+            "request": "launch",
+            "cwd": "${workspaceFolder}",
+            "mainClass": "com.carro.service.CarroApplication",
+            "projectName": "carro",
+            "args": "",
+            "envFile": "${workspaceFolder}/.env",
         },
         {
             "type": "java",
@@ -39,7 +55,16 @@
             "projectName": "usuario",
             "args": "",
             "envFile": "${workspaceFolder}/.env",
-            "vmArgs": " -Dcom.sun.management.jmxremote -Dcom.sun.management.jmxremote.port=53891 -Dcom.sun.management.jmxremote.authenticate=false -Dcom.sun.management.jmxremote.ssl=false -Dspring.jmx.enabled=true -Djava.rmi.server.hostname=localhost -Dspring.application.admin.enabled=true -Dspring.boot.project.name=usuario"
+        },
+        {
+            "type": "java",
+            "name": "Spring Boot-UsuarioApplication<usuario> Instance 2",
+            "request": "launch",
+            "cwd": "${workspaceFolder}",
+            "mainClass": "com.usuario.service.UsuarioApplication",
+            "projectName": "usuario",
+            "args": "",
+            "envFile": "${workspaceFolder}/.env",
         },
         {
             "type": "java",
@@ -49,8 +74,18 @@
             "mainClass": "com.moto.service.MotoApplication",
             "projectName": "moto",
             "args": "",
-            "envFile": "${workspaceFolder}/.env"
+            "envFile": "${workspaceFolder}/.env",
         },
+        {
+            "type": "java",
+            "name": "Spring Boot-MotoApplication<moto> Instance 2",
+            "request": "launch",
+            "cwd": "${workspaceFolder}",
+            "mainClass": "com.moto.service.MotoApplication",
+            "projectName": "moto",
+            "args": "",
+            "envFile": "${workspaceFolder}/.env",
+        }, 
         {
             "type": "java",
             "name": "Spring Boot-ConfigApplication<config>",
