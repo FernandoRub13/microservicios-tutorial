@@ -7,6 +7,6 @@ spring:
         git:
           default-label: config-server
           uri: https://github.com/FernandoRub13/microservicios-tutorial
-          search-paths: config-server
+          search-paths: config-data
   application:
     name: config-server
