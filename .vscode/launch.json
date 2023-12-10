@@ -2,6 +2,13 @@
     "configurations": [
         {
             "type": "java",
+            "name": "ConfigApplication",
+            "request": "launch",
+            "mainClass": "com.config.service.config.ConfigApplication",
+            "projectName": ""
+        },
+        {
+            "type": "java",
             "name": "MotoApplication",
             "request": "launch",
             "mainClass": "com.moto.service.MotoApplication"
