@@ -33,7 +33,7 @@
             "cwd": "${workspaceFolder}",
             "mainClass": "com.carro.service.CarroApplication",
             "projectName": "carro",
-            "args": "",
+            "args": "--spring.application.instance_id=carro1",
             "envFile": "${workspaceFolder}/.env",
         },
         {
@@ -43,7 +43,7 @@
             "cwd": "${workspaceFolder}",
             "mainClass": "com.carro.service.CarroApplication",
             "projectName": "carro",
-            "args": "",
+            "args": "--spring.application.instance_id=carro2",
             "envFile": "${workspaceFolder}/.env",
         },
         {
@@ -53,7 +53,7 @@
             "cwd": "${workspaceFolder}",
             "mainClass": "com.usuario.service.UsuarioApplication",
             "projectName": "usuario",
-            "args": "",
+            "args": "--spring.application.instance_id=usuario1",
             "envFile": "${workspaceFolder}/.env",
         },
         {
@@ -63,7 +63,7 @@
             "cwd": "${workspaceFolder}",
             "mainClass": "com.usuario.service.UsuarioApplication",
             "projectName": "usuario",
-            "args": "",
+            "args": "--spring.application.instance_id=usuario2",
             "envFile": "${workspaceFolder}/.env",
         },
         {
@@ -73,7 +73,7 @@
             "cwd": "${workspaceFolder}",
             "mainClass": "com.moto.service.MotoApplication",
             "projectName": "moto",
-            "args": "",
+            "args": "--spring.application.instance_id=moto1",
             "envFile": "${workspaceFolder}/.env",
         },
         {
@@ -83,7 +83,7 @@
             "cwd": "${workspaceFolder}",
             "mainClass": "com.moto.service.MotoApplication",
             "projectName": "moto",
-            "args": "",
+            "args": "--spring.application.instance_id=moto2",
             "envFile": "${workspaceFolder}/.env",
         }, 
         {
