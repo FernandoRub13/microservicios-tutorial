@@ -1,0 +1,110 @@
+{
+    "configurations": [
+        {
+            "type": "java",
+            "name": "Launch with Arguments Prompt",
+            "request": "launch",
+            "mainClass": "",
+            "args": "${command:SpecifyProgramArgs}"
+        },
+        {
+            "type": "java",
+            "name": "ConfigApplication",
+            "request": "launch",
+            "mainClass": "com.config.service.config.ConfigApplication",
+            "projectName": ""
+        },
+        {
+            "type": "java",
+            "name": "MotoApplication",
+            "request": "launch",
+            "mainClass": "com.moto.service.MotoApplication"
+        },
+        {
+            "type": "java",
+            "name": "MotoServiceApplication",
+            "request": "launch",
+            "mainClass": "com.moto.service.MotoServiceApplication"
+        },
+        {
+            "type": "java",
+            "name": "Spring Boot-CarroApplication<carro>",
+            "request": "launch",
+            "cwd": "${workspaceFolder}",
+            "mainClass": "com.carro.service.CarroApplication",
+            "projectName": "carro",
+            "args": "--spring.application.instance_id=carro1",
+            "envFile": "${workspaceFolder}/.env"
+        },
+        {
+            "type": "java",
+            "name": "Spring Boot-CarroApplication<carro> Instance 2",
+            "request": "launch",
+            "cwd": "${workspaceFolder}",
+            "mainClass": "com.carro.service.CarroApplication",
+            "projectName": "carro",
+            "args": "--spring.application.instance_id=carro2",
+            "envFile": "${workspaceFolder}/.env"
+        },
+        {
+            "type": "java",
+            "name": "Spring Boot-UsuarioApplication<usuario>",
+            "request": "launch",
+            "cwd": "${workspaceFolder}",
+            "mainClass": "com.usuario.service.UsuarioApplication",
+            "projectName": "usuario",
+            "args": "--spring.application.instance_id=usuario1",
+            "envFile": "${workspaceFolder}/.env"
+        },
+        {
+            "type": "java",
+            "name": "Spring Boot-UsuarioApplication<usuario> Instance 2",
+            "request": "launch",
+            "cwd": "${workspaceFolder}",
+            "mainClass": "com.usuario.service.UsuarioApplication",
+            "projectName": "usuario",
+            "args": "--spring.application.instance_id=usuario2",
+            "envFile": "${workspaceFolder}/.env"
+        },
+        {
+            "type": "java",
+            "name": "Spring Boot-MotoApplication<moto>",
+            "request": "launch",
+            "cwd": "${workspaceFolder}",
+            "mainClass": "com.moto.service.MotoApplication",
+            "projectName": "moto",
+            "args": "--spring.application.instance_id=moto1",
+            "envFile": "${workspaceFolder}/.env"
+        },
+        {
+            "type": "java",
+            "name": "Spring Boot-MotoApplication<moto> Instance 2",
+            "request": "launch",
+            "cwd": "${workspaceFolder}",
+            "mainClass": "com.moto.service.MotoApplication",
+            "projectName": "moto",
+            "args": "--spring.application.instance_id=moto2",
+            "envFile": "${workspaceFolder}/.env"
+        }, 
+        {
+            "type": "java",
+            "name": "Spring Boot-ConfigApplication<config>",
+            "request": "launch",
+            "cwd": "${workspaceFolder}",
+            "mainClass": "com.config.service.config.ConfigApplication",
+            "projectName": "config",
+            "args": "",
+            "envFile": "${workspaceFolder}/.env"
+        },
+        {
+            "type": "java",
+            "name": "Spring Boot-EurekaApplication<eureka>",
+            "request": "launch",
+            "cwd": "${workspaceFolder}",
+            "mainClass": "com.eureka.service.eureka.EurekaApplication",
+            "projectName": "eureka",
+            "args": "",
+            "envFile": "${workspaceFolder}/.env"
+        }
+    ]
+}
