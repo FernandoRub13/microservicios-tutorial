@@ -1,9 +1,10 @@
 package com.usuario.service.controladores;
 
+import java.util.ArrayList;
 import java.util.List;
 
-import org.apache.hc.core5.http.HttpStatus;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
@@ -109,25 +110,27 @@ public class UsuarioController {
         return ResponseEntity.ok(usuarioServicio.getCarrosMotos(id));
     }
 
-    private ResponseEntity<List<Carro>> getCarrosFallback(@PathVariable int id, @RequestBody Carro body, Exception e) {
-        return ResponseEntity.ok("El servicio de carros no está disponible");
+    private ResponseEntity<String> getCarrosFallback(int id, Exception e) {
+        return ResponseEntity.status(HttpStatus.SERVICE_UNAVAILABLE).body("Servicio de carros no disponible");
     }
 
-    private ResponseEntity<List<Moto>> getMotosFallback(@PathVariable int id, @RequestBody Moto body, Exception e) {
-        return ResponseEntity.ok("El servicio de motos no está disponible");
+    private ResponseEntity<String> getMotosFallback(int id, Exception e) {
+        return ResponseEntity.status(HttpStatus.SERVICE_UNAVAILABLE).body("Servicio de motos no disponible");
     }
 
-    private ResponseEntity<Carro> saveCarroFallback(@PathVariable int id, @RequestBody Carro body, Exception e) {
-        return ResponseEntity.ok("El servicio de carros no está disponible");
+    private ResponseEntity<String> saveCarroFallback(int id, Carro carro, Exception e) {
+        return ResponseEntity.status(HttpStatus.SERVICE_UNAVAILABLE).body("Servicio de carros no disponible");
     }
 
-    private ResponseEntity<Moto> saveMotoFallback(@PathVariable int id, @RequestBody Moto body, Exception e) {
-        return ResponseEntity.ok("El servicio de motos no está disponible");
+    private ResponseEntity<String> saveMotoFallback(int id, Moto moto, Exception e) {
+        return ResponseEntity.status(HttpStatus.SERVICE_UNAVAILABLE).body("Servicio de motos no disponible");
     }
 
-    private ResponseEntity<Object> getCarrosMotosFallback(@PathVariable int id, @RequestBody Moto body, Exception e) {
-        return ResponseEntity.ok("El servicio de carros y motos no está disponible");
+    private ResponseEntity<String> getCarrosMotosFallback(int id, Exception e) {
+        return ResponseEntity.status(HttpStatus.SERVICE_UNAVAILABLE).body("Servicio de carros y motos no disponible");
     }
+
+    
 
 
 }
