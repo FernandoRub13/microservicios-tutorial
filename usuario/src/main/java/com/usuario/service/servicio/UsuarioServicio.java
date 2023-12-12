@@ -31,15 +31,27 @@ public class UsuarioServicio {
     private MotoFeignClient motoFeignClient;
 
     
-    public List<Carro> getCarros (int usuarioId){
-        List<Carro> carros = carroFeignClient.getCarros(usuarioId);
-        return carros;
-    } 
+    // public List<Carro> getCarros (int usuarioId){
+    //     List<Carro> carros = carroFeignClient.getCarros(usuarioId);
+    //     return carros;
+    // } 
 
-    public List<Moto> getMotos (int usuarioId){
-        List<Moto> motos = motoFeignClient.getMotos(usuarioId);
-        return motos;
-    }
+    // public List<Moto> getMotos (int usuarioId){
+    //     List<Moto> motos = motoFeignClient.getMotos(usuarioId);
+    //     return motos;
+    // }
+
+
+	public List<Carro> getCarros(int usuarioId) {
+		List<Carro> carros = restTemplate.getForObject("http://carro-service/carro/usuario/"+usuarioId, List.class);
+		return carros;
+	}
+
+	public List<Moto> getMotos(int usuarioId) {
+		List<Moto> motos = restTemplate.getForObject("http://moto-service/moto/usuario/" + usuarioId, List.class);
+		return motos;
+	}
+
 
     public Carro saveCarro(int usuarioId, Carro carro){
         carro.setUsuarioId(usuarioId);
@@ -79,13 +91,13 @@ public class UsuarioServicio {
             return map;
         }
         map.put("usuario", usuario);
-        List<Carro> carros = this.getCarros(id);
+        List<Carro> carros = carroFeignClient.getCarros(id);
         if ( carros == null || carros.isEmpty()) {
             map.put("carros", "No hay carros");
         } else {
             map.put("carros", carros);
         }
-        List<Moto> motos = this.getMotos(id);
+        List<Moto> motos = motoFeignClient.getMotos(id);
         if (motos == null || motos.isEmpty()) {
             map.put("motos", "No hay motos");
         } else {
