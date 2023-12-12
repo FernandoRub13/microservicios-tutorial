@@ -109,23 +109,23 @@ public class UsuarioController {
         return ResponseEntity.ok(usuarioServicio.getCarrosMotos(id));
     }
 
-    private ResponseEntity<String> getCarrosFallback(@PathVariable int id, @RequestBody Carro body, Exception e) {
+    private ResponseEntity<List<Carro>> getCarrosFallback(@PathVariable int id, @RequestBody Carro body, Exception e) {
         return ResponseEntity.ok("El servicio de carros no está disponible");
     }
 
-    private ResponseEntity<String> getMotosFallback(@PathVariable int id, @RequestBody Moto body, Exception e) {
+    private ResponseEntity<List<Moto>> getMotosFallback(@PathVariable int id, @RequestBody Moto body, Exception e) {
         return ResponseEntity.ok("El servicio de motos no está disponible");
     }
 
-    private ResponseEntity<String> saveCarroFallback(@PathVariable int id, @RequestBody Carro body, Exception e) {
+    private ResponseEntity<Carro> saveCarroFallback(@PathVariable int id, @RequestBody Carro body, Exception e) {
         return ResponseEntity.ok("El servicio de carros no está disponible");
     }
 
-    private ResponseEntity<String> saveMotoFallback(@PathVariable int id, @RequestBody Moto body, Exception e) {
+    private ResponseEntity<Moto> saveMotoFallback(@PathVariable int id, @RequestBody Moto body, Exception e) {
         return ResponseEntity.ok("El servicio de motos no está disponible");
     }
 
-    private ResponseEntity<String> getCarrosMotosFallback(@PathVariable int id, @RequestBody Moto body, Exception e) {
+    private ResponseEntity<Object> getCarrosMotosFallback(@PathVariable int id, @RequestBody Moto body, Exception e) {
         return ResponseEntity.ok("El servicio de carros y motos no está disponible");
     }
 
